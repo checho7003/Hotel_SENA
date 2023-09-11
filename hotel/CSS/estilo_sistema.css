@@ -1,0 +1,343 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    display: flex;
+    overflow: hidden;
+}
+
+.bloque{
+    width: 100vw;
+    padding-top: 50px;
+    flex-shrink: 0;
+    height: 100vh;
+}
+
+/*Menu de navegacion*/
+
+header{
+    position: fixed;
+    bottom: 0;
+    padding: 10px 0;
+    width: 100%;
+    background-image: linear-gradient(to right, rgb(160, 164, 159),rgb(193, 223, 181),rgb(0, 0, 0));
+    text-align: center;
+}
+
+header a{
+    display: inline-block;
+    margin: 0 20px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 24px;
+}
+
+header span{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    line-height: 40px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    padding: 3px;
+}
+
+.icono_menu img{
+    width: 40px;
+    height: 40px;
+    
+}
+
+.selected{
+    color: rgb(255, 255, 255);
+    transition: .3s;
+}
+
+.selected:hover{
+    color:rgb(0, 0, 0);
+}
+
+
+/*---------------
+CONGIGURACION PAGINA INICIO
+------------------
+*/
+#intro{
+    background-image: url(../IMG/fondo_servicio.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#intro .contenido h1{
+    font-size: 4rem;
+    text-align: center;
+    color: aliceblue;
+    text-shadow: 3px 3px 10px black;
+    position: relative;
+    animation: 3s aparecer forwards;
+    padding-bottom: 80px;
+}
+
+@keyframes aparecer{
+    0%{
+        opacity: 0;
+        top: 50px;   
+    }
+    100%{
+        opacity: 1;
+        top: 0px;
+    }
+}
+
+/*---------------
+CONGIGURACION FORMULARIO
+------------------
+*/
+
+/*CONFIGURACION EXCLUSIVA PARA EL FORMULARIO DE LA PAGINA DE INICIO */
+#intro .formulario{
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 3%;
+    width: 40%;
+    height: 250px;
+    padding-left: 40px;
+    padding-right: 40px;
+    color: #211f1f;
+    margin-left: 300px;
+    margin-bottom: 80px;
+}
+
+/*Configuracion de los elementos que hay en el 
+formulario en la pagina de inicio*/
+
+.formulario h3 {
+    color: #000000;
+    text-align: center;
+    padding: 10px;
+    font-size: 30px;
+}
+
+ .formulario .info {
+    margin-bottom: 20px;
+}
+
+.info label {
+    display: block;
+    color: #000000;
+    font-weight: bold;
+}
+
+.info input {
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 4%;
+    border-bottom: 1px solid #4d4343;
+    padding: 5px;
+    outline: none;
+    background-color: #ffffff;
+}
+
+.formulario .btn_enviar {
+    background-color: #18b12f;
+    display: block;
+    border: none;
+    color: #e2dddd;
+    padding: 7px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 35%;
+    }
+
+
+/*-------
+CONFIGURACION PAGINA SERVICIOS
+-------*/
+
+#servicios {
+    background: linear-gradient(transparent, rgb(110, 117, 108)), url(../IMG/servicios.jpeg);
+    background-size: cover;
+}
+ 
+ #servicios h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+ }
+ 
+ #servicios .contenido {
+    max-width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+ }
+ 
+ #servicios .servicio1 {
+     background-image: url(../IMG/piscina.jpeg);
+ }
+ 
+ #servicios .servicio2 {
+     background-image: url(../IMG/restaurante.webp);
+ }
+ 
+ #servicios  .servicio3 {
+     background-image: url(../IMG/bar.webp);
+ }
+ 
+ #servicios .servicio4 {
+     background-image: url(../IMG/Spa.jpeg);
+ }
+ 
+ #servicios  .servicio5 {
+     background-image: url(../IMG/servicio_habitacion.webp);
+ }
+
+ /*configuracion del acordeon*/
+ #servicios .item {
+    width: 25%; /*el contenedor item pasa de 25% ancho con hover a 90% de ancho*/
+    height: 400px;
+    background-size: cover;
+    background-position: center center;
+    margin: 0 10px;
+    transition: .7s;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#servicios .item:hover {
+   width: 90%;
+}
+
+#servicios  .overlay {
+   position: absolute;
+   background: linear-gradient(to bottom, transparent 80%, rgb(224, 218, 218));
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+}
+
+#servicios .item .titulo {
+   position: absolute;
+   bottom: -10px;
+   letter-spacing: 2px;
+   left: 50%;
+   transform: translateX(-50%);
+   color: #52c73b;
+   font-style: 20px;
+   background-color: rgb(255, 255, 255);
+   padding: 10px 0;
+   width: 100%;
+   opacity: 0;
+   transition: .3s;
+}
+
+#servicios .item:hover .titulo {
+   bottom: -20px;
+   opacity: 1;
+}
+
+/*Seccion de Reserva*/
+#reservas{
+    background: linear-gradient(transparent,rgb(213, 206, 206)),url(../IMG/reserva.jpeg);
+    background-size: cover;
+}
+
+#reservas .titulo{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+#reservas p{
+    background-color: rgba(240, 248, 255, 0.466);
+    border: 2px solid black;
+    border-radius: 15px;
+    margin-left: 19%;
+    margin-right: 20%;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+
+
+/*Seccion de contactenos*/
+
+
+#contactenos{ 
+    background: linear-gradient(transparent, rgb(149, 153, 149)),url(../IMG/contactenos.webp);
+    background-size:cover;
+}
+
+#contactenos .contenido{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 2%;
+}
+
+#contactenos .datos{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#contactenos .formulario{
+    margin-right: 25%;
+    background-color: rgba(255, 255, 255, 0.467);
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 3%;
+}
+
+#contactenos input{
+    border:2px solid rgba(0, 0, 0, 0.556) ;
+    border-radius: 5px;
+}
+
+#contactenos .btn_enviar{
+    margin-bottom: 30px;
+}
+
+textarea{
+    border:2px solid #000000;
+    max-width: 500px;
+    resize:horizontal ;
+}
+
+/*Configuracion registrarse*/
+#registro{
+    background: linear-gradient(transparent,rgb(230, 230, 230)),url(../IMG/registro.webp);
+    background-size: cover;
+}
+
+#registro .contenido{
+    display: block;
+    background-color: #ffffff9b;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-radius: 15px;
+}
+
+#registro input{
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+#registro .btn_enviar{
+    bottom: 30px;
+}

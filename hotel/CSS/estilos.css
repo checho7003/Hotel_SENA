@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: white;   
+}
+
+header{
+    background-color: rgb(106, 107, 115);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20%;
+    color: white;
+}
+
+.logo{
+    margin: 10px;
+    width: 290px;
+    float: left;
+}
+
+.titulo{
+    font-size: 60px;
+    margin-left: 20%;
+    
+}
+
+/*MENU*/
+
+nav{
+
+}
+
+.navegador{
+    display: flex;
+    justify-content:space-around;
+    background-color: rgb(84, 170, 42);
+    height: 40px;
+    padding-top: 1% ;
+    list-style: none;
+}
+
+.navegador li a{
+    color: white;
+    text-decoration: none;
+}
+
+
+.menu li a{
+
+}
+
+/*Submenu*/
+.submenu{
+    visibility: hidden;
+    list-style: none;
+    background:linear-gradient(to left,rgb(150, 145, 145),rgb(55, 181, 24) );
+
+}
+
+li:hover .submenu{
+    visibility: visible;
+    color: white;
+    transition: all;
+}
+.submenu li a{
+    color: white;
+
+}
+
+/*BANNER*/
+
+
+.banner_estatico{
+    background-image: url("../IMG/banner3.jpg");
+    background-size: 100%;
+    width: 80%;
+    margin: 2% 10% 2% 10%;
+    border-radius:25px ;
+    display: flex;
+     
+}
+
+.banner_estatico h2,
+.banner_estatico p{
+    font-size: 50px;
+    color: rgb(42, 166, 21);
+    margin-right: 5%;
+    
+}
+
+.banner_estatico p{
+    color: black;
+    font-size: 35px;
+}
+
+/*Contenido*/
+
+.contenido{
+    display: table;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/*Articulo*/
+/*rederizar al contenedor de estado a columnas*/
+.entidad{
+  display: table-cell;
+  width: 600px;
+  padding-top: 40px;
+}
+
+/*Se fija al contenedor de estado a columnas*/
+
+.articulo{
+    column-count:2;
+    column-gap: 50px;/*Espaciado entre columnas*/
+}
+
+.articulo h2,h3{
+    margin-top: 5px;
+    font-size: 40px;
+    color: rgb(82, 184, 38);
+}
+
+.aprendices{
+    margin-top: 3px;
+    width: 60%;
+}
+
+.entidad li{
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.entidad p{
+    font-size: 25px;
+}
+
+
+/*Cajas con links*/
+.comentarios {
+    background:lightblue;
+}
+
+/*Formulario*/
+form{
+    max-width: 400px;
+    margin: 22px;
+    padding: 40px;
+    border: 1px solid black;
+    background-color: rgb(106, 107, 115);
+    border-radius: 5%;
+}
+form h3{
+    margin-top: 0;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+    color:white
+}
+
+form input,textarea{
+    width: 80%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="date"] {
+    width: auto; /* Ajusta el ancho para el campo de fecha */
+  }
+/*Contenido inferior*/
+.abajo{
+    display: flex;
+    justify-content: center;
+}
+.abajo h3{
+    font-size: 25px;
+}
+.abajo a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.abajo a:hover{
+    color: rgb(25, 161, 31);
+}
+.abajo p{
+    font-size:20px;
+    
+}
+
+footer{
+    background-color: rgb(106, 107, 115);
+}
+
+/*PROGRAMA DE PROYECTO*/
+.arriba a{
+    text-decoration: none;
+    color:  rgb(106, 107, 115);
+    font-size: 25px;
+}
+
+.arriba a:hover{
+    color: rgb(25, 161, 31);
+}
+ 
+.arriba img{
+    width: 100%;
+}
